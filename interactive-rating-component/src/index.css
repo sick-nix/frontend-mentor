@@ -79,7 +79,11 @@ body {
 	cursor: pointer;
 }
 
-.rating:focus-within,
+.rating:focus-within {
+	outline: 1px solid var(--primary);
+	outline-offset: 2px;
+}
+
 .rating.selected {
 	color: white;
 	background-color: var(--primary);
@@ -108,6 +112,11 @@ body {
 	color: var(--primary);
 	background-color: #ffffff;
 	cursor: pointer;
+}
+
+.submit-btn:focus-within {
+	outline: 1px solid var(--primary);
+	outline-offset: 2px;
 }
 
 .container.with-selected-rating {
