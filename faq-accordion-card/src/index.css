@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans:400,700");
+
+:root {
+	--primary: hsl(25, 97%, 53%);
+	--neutral-white: hsl(0, 0%, 100%);
+	--neutral-light-grey: hsl(217, 12%, 63%);
+	--neutral-medium-grey: hsl(216, 12%, 54%);
+	--neutral-dark-blue: hsl(213, 19%, 18%);
+	--neutral-very-dark-blue: hsl(216, 12%, 8%);
+	--font-size: 15px;
+}
+
+body {
+	font-family: "Kumb-Sans", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(#af67ea, #6663e8);
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+#root {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.container {
+	width: 820px;
+	height: 450px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: white;
+	border-radius: 1.5rem;
+}
+
+.images-container {
+	position: relative;
+	height: 100%;
+}
+
+.images-container img {
+	position: absolute;
+}
+
+.images-overflow {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.illustration {
+	width: 100%;
+	left: -15%;
+	bottom: 20%;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.illustration-box {
+	top: 37%;
+	left: -17%;
+	z-index: 2;
+	overflow: visible;
+	width: 40%;
+}
+
+.illustration-pattern {
+	bottom: -30%;
+	left: -125%;
+	width: 210%;
+}
+
+.header {
+	font-family: "Kumb-Sans", sans-serif;
+	margin-bottom: 0;
+}
+
+.accordion {
+	padding: 2rem 1rem;
+	padding-right: 6rem;
+}
+
+.list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.list-item {
+	border-bottom: 1px solid #ebebeb;
+	padding: 0.75rem 0;
+}
+
+.list-item:hover {
+	cursor: pointer;
+}
+
+.list-item:hover .title {
+	color: #e4aba0;
+}
+
+.list-item.selected .title {
+	color: #0c0b1a;
+	font-weight: 700;
+}
+
+.list-item.selected .title img {
+	rotate: 180deg;
+}
+
+.title {
+	display: flex;
+	color: #6e6d73;
+	font-family: "Kumb-Sans", sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	align-items: center;
+
+	transition: color 100ms linear;
+}
+
+.title img {
+	margin-left: auto;
+	width: 10px;
+	height: 6px;
+	transition: rotate 100ms linear;
+}
+
+.description {
+	color: #807f84;
+	font-size: 11px;
+	font-family: "Kumb-Sans", sans-serif;
+	font-weight: 400;
+
+	visibility: hidden;
+	opacity: 0;
+	max-height: 0;
+	margin-top: 0;
+	transition: visibility 0s, opacity 0s linear, max-height 0.5s linear,
+		margin-top 0s linear;
+}
+
+.description.show {
+	visibility: visible;
+	opacity: 1;
+	max-height: fit-content;
+	margin-top: 0.75rem;
+}
