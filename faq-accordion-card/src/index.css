@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Kumbh+Sans:400,700");
 
-:root {
-	--primary: hsl(25, 97%, 53%);
-	--neutral-white: hsl(0, 0%, 100%);
-	--neutral-light-grey: hsl(217, 12%, 63%);
-	--neutral-medium-grey: hsl(216, 12%, 54%);
-	--neutral-dark-blue: hsl(213, 19%, 18%);
-	--neutral-very-dark-blue: hsl(216, 12%, 8%);
-	--font-size: 15px;
-}
-
 body {
 	font-family: "Kumb-Sans", sans-serif;
 	margin: 0;
@@ -55,24 +45,42 @@ body {
 
 .illustration {
 	width: 100%;
-	left: -15%;
-	bottom: 20%;
+	left: -4rem;
 	z-index: 1;
 	overflow: hidden;
+
+	background-image: url("/illustration-woman-online-desktop.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100%;
+	bottom: -3rem;
+	position: absolute;
 }
 
 .illustration-box {
-	top: 37%;
-	left: -17%;
+	top: 10.5rem;
+	left: -4.5rem;
 	z-index: 2;
 	overflow: visible;
 	width: 40%;
+
+	background-image: url("/illustration-box-desktop.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100%;
+	position: absolute;
 }
 
 .illustration-pattern {
-	bottom: -30%;
-	left: -125%;
+	bottom: -4rem;
+	left: -25rem;
 	width: 210%;
+
+	background-image: url("/bg-pattern-desktop.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 163%;
+	position: absolute;
 }
 
 .header {
@@ -149,4 +157,61 @@ body {
 	opacity: 1;
 	max-height: fit-content;
 	margin-top: 0.75rem;
+}
+
+@media screen and (max-width: 375px) {
+	.container {
+		width: 338px;
+		height: 535px;
+		display: flex;
+		position: relative;
+	}
+
+	.header {
+		text-align: center;
+	}
+
+	.images-container {
+		height: 0;
+		width: 100%;
+		position: absolute;
+	}
+
+	.images-overflow {
+		overflow: visible;
+		height: 0;
+	}
+
+	.illustration {
+		background-image: url("/illustration-woman-online-mobile.svg");
+		position: absolute;
+
+		top: -6.7rem;
+		left: 3rem;
+		width: 240px;
+		height: 240px;
+	}
+
+	.illustration-pattern {
+		background-image: url("/bg-pattern-mobile.svg");
+		position: absolute;
+		top: 0.1rem;
+		left: 3rem;
+		width: 240px;
+		height: 120px;
+	}
+
+	.illustration-box {
+		background-image: none;
+		display: none;
+	}
+
+	/* .images-container {
+		display: none;
+	} */
+
+	.accordion {
+		padding-inline: 1.5rem;
+		padding-top: 8rem;
+	}
 }

@@ -35,19 +35,10 @@ function App() {
 			<div className="container">
 				<div className="images-container">
 					<div className="images-overflow">
-						<img
-							className="illustration"
-							src="/illustration-woman-online-desktop.svg"
-						/>
-						<img
-							className="illustration-pattern"
-							src="/bg-pattern-desktop.svg"
-						/>
+						<div className="illustration" />
+						<div className="illustration-pattern" />
 					</div>
-					<img
-						className="illustration-box"
-						src="/illustration-box-desktop.svg"
-					/>
+					<div className="illustration-box" />
 				</div>
 				<div className="accordion">
 					<h1 className="header">FAQ</h1>
